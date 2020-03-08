@@ -1,0 +1,10 @@
+version: '3'
+services:
+  raindropper:
+    build:
+      context: .
+    working_dir: /root
+    container_name: raindropper
+    ports:
+      - "8033:8033"
+    entrypoint: /etc/init.sh

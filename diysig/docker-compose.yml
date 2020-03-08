@@ -1,0 +1,7 @@
+version: '3'
+services:
+  diysig:
+    build: ./
+    restart: always
+    ports:
+      - 3001:3001

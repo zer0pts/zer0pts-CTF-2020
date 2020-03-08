@@ -1,0 +1,13 @@
+version: '3'
+services:
+  syscall:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: syscall
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9006:9006"
+    entrypoint: /etc/init.sh

@@ -1,0 +1,394 @@
+servers:
+  ?: &crypto_host localhost
+  ?: &pwn_host localhost
+  ?: &web_host localhost
+  ?: &vm_host localhost
+  ?: &forensics_host localhost
+challenges:
+  "diysig":
+    category: crypto
+    flag: "zer0pts{n3v3r_r3v34l_7h3_LSB}"
+    description: |
+      <p>I made a cipher-signature system by myself.</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: [theoremoon]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    host: *crypto_host
+    port: 3001
+    difficulty: easy
+  "ROR":
+    category: crypto
+    flag: "zer0pts{0h_1t_l34ks_th3_l34st_s1gn1f1c4nt_b1t}"
+    description: |
+      <p>LOL</p>
+    author: ptr-yudai
+    testers: [yoshiking]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: warmup
+    host: *crypto_host
+  "nibelung":
+    category: crypto
+    flag: "zer0pts{r1ng_h0m0m0rph1sm_1s_c00l}"
+    description: |
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *crypto_host
+    port: 3002
+    difficulty: medium
+  "dirty laundry":
+    category: crypto
+    flag: "zer0pts{excellent_w0rk!y0u_are_a_master_0f_crypt0!!!}"
+    description: |
+      <p>Do you wanna air my dirty laundry?</p>
+    author: yoshiking
+    testers: []
+    base_score: 1000
+    completed: true
+    difficulty: lunatic
+  "hipwn":
+    category: pwn
+    flag: "zer0pts{welcome_yokoso_osooseyo_huanying_dobropozhalovat}"
+    description: |
+      <p>Hi, all pwners over the world!</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9010
+    difficulty: warmup
+  "protrude":
+    category: pwn
+    flag: "zer0pts{0ops_long_is_8_byt3s_l0ng}"
+    description: |
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9005
+    difficulty: medium
+  "diylist":
+    category: pwn
+    flag: "zer0pts{m4y_th3_typ3_b3_w1th_y0u}"
+    description: |
+      <p>.</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9010
+    difficulty: warmup
+  "diylist":
+    category: pwn
+    flag: "zer0pts{m4y_th3_typ3_b3_w1th_y0u}"
+    description: |
+      <p>This homemade library enables us to use List in C like Python.</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9007
+    difficulty: easy
+  "grimoire":
+    category: pwn
+    flag: "zer0pts{l0g1c4l_pwn_15_4_l0t_0f_fun}"
+    description: |
+      <p>The spell protects me from creatures.</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9008
+    difficulty: hard
+  "syscall kit":
+    category: pwn
+    flag: "zer0pts{n0_w4y!_i_b4nn3d_3v3ry_d4ng3r0us_sysc4ll!}"
+    description: |
+      <p>It's a good tool to learn syscall, isn't it?</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9006
+    difficulty: hard
+  "babybof":
+    category: pwn
+    flag: "zer0pts{b0f_i5_4lw4y5_d4ng3r0u5}"
+    description: |
+      <p>Simple BOF with PIE/SSP disabled and libc disclosed. Who can't solve it?</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9002
+    difficulty: lunatic
+  "meowmow":
+    category: pwn
+    flag: "zer0pts{h34p_0v3rfl0w_VS_k4slr+sm3p+sm4p+ktp1}"
+    description: |
+      <pre>$ echo Jot down your ideas > /dev/memo && cat /dev/memo </pre>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    base_score: 1000
+    completed: true
+    host: *vm_host
+    port: 9003
+    difficulty: medium
+  "ωget":
+    category: pwn
+    flag: "zer0pts{w0w_u_m4d3_17_1nt3r4ct1v3}"
+    description: |
+      <p>I made an <a href="http://{{.Host}}:{{.Port}}/" target="_blank">alternative web service</a> to wget.</p>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9009
+    difficulty: lunatic
+  "hipwn":
+    category: pwn
+    flag: "zer0pts{welcome_yokoso_osooseyo_huanying_dobropozhalovat}"
+    description: |
+      <p>Hi, all pwners over the world!</p>
+      <pre>nc {{.Host}} {{.Port}}</pre>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *pwn_host
+    port: 9010
+    difficulty: warmup
+  "QR Puzzle":
+    category: reversing
+    flag: "zer0pts{puzzl3puzzl3}"
+    description: |
+      <p>This puzzle is a puzzling puzzle.</p>
+    author: ptr-yudai
+    testers: [theoldmoon0602, yoshiking]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: warmup
+  "easy strcmp":
+    category: reversing
+    flag: "zer0pts{l3ts_m4k3_4_DETOUR_t0d4y}"
+    description: |
+      <p>Do you know how relocation works?</p>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: easy
+  "wysinwyg":
+    category: reversing
+    flag: "zer0pts{sysc4ll_h00k1ng_1s_1mp0rt4nt}"
+    description: |
+      <p>Do you know how ptrace works?</p>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: medium
+  "raindropper":
+    category: reversing
+    flag: "zer0pts{REST_IN_SPAGHETTI_NEVER_FORGETTI}"
+    description: |
+      <p>When you're infected with a ransomware: Don't send money. Just break the cipher by yourself.</p>
+      <p style="color:red">*** The attached file may harm your computer. DO NOT RUN IT on your host machine. ***</p>
+    author: ptr-yudai
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: hard
+  "notepad":
+    category: web
+    flag: "zer0pts{fl4sk_s3ss10n_4nd_pyth0n_RCE}"
+    description: |
+      <p>This notepad is more useful than Windows one, right?</p>
+      <a href="http://{{.Host}}:{{.Port}}/" target="_blank">Challenge</a>
+    author: ptr-yudai
+    testers: [st98]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *web_host
+    port: 8001
+    difficulty: easy
+  "phpNantokaAdmin":
+    category: web
+    flag: 'zer0pts{Smile_Sweet_Sister_Sadistic_Surprise_Service_SQL_Injection!!}'
+    description: |
+      <p><b>phpNantokaAdmin</b> is a management tool for SQLite.</p>
+      <a href="http://{{.Host}}:{{.Port}}/" target="_blank">Challenge</a>
+    author: st98
+    testers: [ptr-yudai]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *web_host
+    port: 8002
+    difficulty: medium
+  "Can you guess it?":
+    category: web
+    flag: "zer0pts{gu3ss1ng_r4nd0m_by73s_1s_un1n73nd3d_s0lu710n}"
+    description: |
+      <a href="http://{{.Host}}:{{.Port}}/" target="_blank">Challenge</a>
+    author: st98
+    testers: [ptr-yudai]
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *web_host
+    port: 8003
+    difficulty: warmup
+  "Locked KitKat":
+    category: forensics
+    flag: "zer0pts{n0th1ng_1s_m0r3_pr4ct1c4l_th4n_brut3_f0rc1ng}"
+    description: |
+      We've extracted the internal disk from the Android device of the suspect.
+      Can you find the pattern to unlock the device?
+      Please submit the correct pattern <a href="http://{{.Host}}:{{.Port}}/" target="_blank">here</a>.
+    author: ptr-yudai
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *forensics_host
+    port: 10001
+    difficulty: warmup
+  "shredder":
+    category: forensics
+    flag: "zer0pts{3v3ryth1ng_1s_1n_ur_m3m0ry}"
+    description: |
+      <p>I've accidentally removed an important file using a strong shredder. Can you restore the file from its core dump?</p>
+    author: ptr-yudai
+    tags: [reversing]
+    testers: []
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: hard
+  "vmlog":
+    category: reversing
+    flag: "zer0pts{3asy_t0_f0110w_th3_l0g?}"
+    description: "I wrote my vm and its program. Can you guess the source code and input?"
+    author: theoremoon
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: easy
+  "Hobbit":
+    category: reversing
+    flag: "zer0pts{d33ds_w1ll_n0t_b3_l3ss_v4l14nt}"
+    description: "The hobbit is small and clever."
+    author: ptr-yudai
+    base_score: 1000
+    completed: true
+    difficulty: lunatic
+  "urlapp":
+    description: '<p>application <a href="http://{{.Host}}:{{.Port}}/" target="_blank">here</a></p>'
+    flag: "zer0pts{sh0rt_t0_10ng_10ng_t0_sh0rt}"
+    category: web
+    tags: []
+    author: theoremoon
+    base_score: 1000
+    difficulty: "easy"
+    is_dynamic: true
+    is_questionary: false
+    host: *web_host
+    port: 8004
+  "MusicBlog":
+    category: web
+    flag: "zer0pts{M4sh1m4fr3sh!!}"
+    description: |
+      <p>You can introduce favorite songs to friends with <b>MusicBlog</b>!</p>
+      <a href="http://{{.Host}}:{{.Port}}/" target="_blank">Challenge</a>
+    author: st98
+    testers:
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    host: *web_host
+    port: 8005
+    difficulty: medium
+  "Welcome":
+    category: others
+    flag: "zer0pts{r_u_r34dy_f0r_zer0pts_CTF?}"
+    description: |
+      <p>Find the flag in our <a href="https://discord.gg/82pU3uB" target="_blank">Discord</a>!</p>
+    author: theoremoon
+    testers:
+    is_dynamic: true
+    is_questionary: false
+    base_score: 1000
+    completed: true
+    difficulty: warmup
+  "Survey":
+    category: others
+    flag: "zer0pts{w3_h0p3_u_3nj0y3d_0ur_CTF!}"
+    description: |
+      <p>Give us your feedback <a href="https://forms.gle/k2rGNXaMaBadJm428" target="_blank">here</a>!</p>
+    author: theoremoon
+    testers:
+    is_dynamic: true
+    is_questionary: true
+    base_score: 1000
+    completed: true
+    difficulty: warmup

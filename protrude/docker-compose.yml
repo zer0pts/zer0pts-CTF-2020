@@ -1,0 +1,13 @@
+version: '3'
+services:
+  protrude:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: protrude
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9005:9005"
+    entrypoint: /etc/init.sh
